@@ -8,6 +8,9 @@ function App() {
     <div>
         <MyPage/>
         {/*<News/>*/}
+        {/*Friends*/}
+        {/*Messages*/}
+        {/*Community*/}
     </div>
   );
 }

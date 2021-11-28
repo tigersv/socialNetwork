@@ -1,7 +1,7 @@
 import React from 'react';
-import {Container, Col, Row} from 'react-bootstrap'
+import {Col, Container, Row} from "react-bootstrap";
 import SideBar from "../../ReusableComponents/SideBar";
-import Content from "./Content";
+import Content from "../../MyPage/Main/Content";
 
 const Main = () => {
     return (
@@ -12,7 +12,7 @@ const Main = () => {
                         <SideBar/>
                     </Col>
                     <Col sm={10}>
-                        <Content/>
+                        News
                     </Col>
                 </Row>
             </Container>

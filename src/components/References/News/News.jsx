@@ -1,9 +1,12 @@
 import React from 'react';
+import NavBar from "../ReusableComponents/NavBar";
+import Main from "./Main/Main";
 
 const News = () => {
     return (
         <div>
-            News
+            <NavBar/>
+            <Main/>
         </div>
     );
 };
