@@ -6,8 +6,8 @@ import News from "./components/References/News/News";
 function App() {
   return (
     <div>
-        <MyPage/>
-        {/*<News/>*/}
+        {/*<MyPage/>*/}
+        <News/>
         {/*Friends*/}
         {/*Messages*/}
         {/*Community*/}

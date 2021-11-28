@@ -1,7 +1,8 @@
 import React from 'react';
 import {Col, Container, Row} from "react-bootstrap";
 import SideBar from "../../ReusableComponents/SideBar";
-import Content from "../../MyPage/Main/Content";
+import NewsContent from "./NewsContent";
+
 
 const Main = () => {
     return (
@@ -11,8 +12,11 @@ const Main = () => {
                     <Col sm={2}>
                         <SideBar/>
                     </Col>
-                    <Col sm={10}>
-                        News
+                    <Col sm={8}>
+                        <NewsContent/>
+                    </Col>
+                    <Col sm={2}>
+                        search
                     </Col>
                 </Row>
             </Container>
