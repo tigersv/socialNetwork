@@ -1,13 +1,24 @@
 import React from 'react';
-import {Card, ListGroup, ListGroupItem, Carousel, Button, Row, Col} from "react-bootstrap"
+import {Card, ListGroup, ListGroupItem, Carousel, Button, Row, Col, InputGroup, FormControl} from "react-bootstrap"
 import {news} from '../../../../fakeBase/news'
 import {users} from '../../../../fakeBase/users'
-
-
+import {useState} from "react"
 
 
 const NewsContent = () => {
     const activeUser = users[0]
+
+    const [currentComment, setCurrentComment] = useState()
+
+    const changeValue = (event) => {
+        setCurrentComment(event.target.value)
+        console.log(event.target.id)
+    }
+
+
+    const commentHandler = () => {
+
+    }
 
     const carouselImg = (mappedList) => {
         return (mappedList.map((link, index) => {
@@ -28,7 +39,7 @@ const NewsContent = () => {
     const newsMapping = () => {
         return (news.map((mappedObject, index) => {
             return (
-                <div>
+                <div key={index}>
                     <Card style={{width: '100%', marginBottom: "20px"}}>
                         <Card.Body>
                             <Card.Title style={{color: "blue"}}><img style={{width: "60px"}}
@@ -115,11 +126,28 @@ const NewsContent = () => {
                         </ListGroup>
                         <Card.Body>
                             <Row>
-                                <Col sm={1}>1</Col>
-                                <Col sm={10}>2</Col>
+                                <Col sm={1}><img src={activeUser.avatar} style={{width: "60px"}}/></Col>
+                                <Col sm={10}>
+                                    <InputGroup>
+                                        <FormControl
+                                            as="textarea"
+                                            aria-label="With textarea"
+                                            value={currentComment}
+                                            name="comment" onChange={(event) => {changeValue(event)}}
+                                            id={index}
+                                        />
+                                    </InputGroup>
+                                </Col>
                                 <Col sm={1}>
-                                    <Button>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    <Button style={{
+                                        backgroundColor: "white",
+                                        color: "#A9A9A9",
+                                        border: "None",
+                                        padding: "17px 0 0 0"
+                                    }}
+                                            onClick={commentHandler}
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                                              fill="currentColor"
                                              className="bi bi-send" viewBox="0 0 16 16">
                                             <path
