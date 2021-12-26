@@ -7,15 +7,16 @@ const Checkbar = () => {
 
     const renderUser = (mappedObject) => {
         return(
-            <Card>
-                <Card.Body>
+            <Card key={mappedObject.id}
+                  style={{borderRadius: "50px", margin: "10px 0 0 0"}}>
+                <Card.Body >
                     <img
                         src={mappedObject.avatar}
-                        style={{width: "100px", float: "left"}}
+                        style={{width: "5vw", float: "left",height: "10vh", verticalAlign: "middle", margin: "0px 10px 0px 15px"}}
                     />
-                    <p>{mappedObject.name}</p>
-                    <p>{mappedObject.username}</p>
-                    <p>course:{mappedObject.course}</p>
+                    <p style={{margin: "5px 0 0 0"}}>{mappedObject.name}</p>
+                    <p style={{margin: "5px 0 0 0"}}>{mappedObject.username}</p>
+                    <p style={{margin: "5px 0 0 0"}}>course:{mappedObject.course}</p>
 
                 </Card.Body>
             </Card>
