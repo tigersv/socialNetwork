@@ -7,8 +7,8 @@ function App() {
   return (
     <div>
         {/*<MyPage/>*/}
-        {/*<News/>*/}
-        <Friends/>
+        <News/>
+        {/*<Friends/>*/}
         {/*Messages*/}
         {/*Community*/}
     </div>
