@@ -12,7 +12,7 @@ const Checkbar = () => {
                 <Card.Body >
                     <img
                         src={mappedObject.avatar}
-                        style={{width: "5vw", float: "left",height: "10vh", verticalAlign: "middle", margin: "0px 10px 0px 15px"}}
+                        style={{width: "100px", float: "left",height: "100px", verticalAlign: "middle", margin: "0px 10px 0px 15px"}}
                     />
                     <p style={{margin: "5px 0 0 0"}}>{mappedObject.name}</p>
                     <p style={{margin: "5px 0 0 0"}}>{mappedObject.username}</p>
