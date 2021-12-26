@@ -4,20 +4,28 @@ import {news} from '../../../../fakeBase/news'
 import {users} from '../../../../fakeBase/users'
 import {useState} from "react"
 
+let commentsTexst = {}
+
+for (let i = 1; i <= news.length; i++)
+{
+    commentsTexst[i] = ""
+}
 
 const NewsContent = () => {
     const activeUser = users[0]
 
-    const [currentComment, setCurrentComment] = useState()
+
+    const [currentComment, setCurrentComment] = useState(commentsTexst)
 
     const changeValue = (event) => {
-        setCurrentComment(event.target.value)
-        console.log(event.target.id)
+        const id = event.target.id
+        const value = event.target.value
+        let state = {...currentComment}
+        state[id] = value
+        setCurrentComment(state)
     }
-
-
-    const commentHandler = () => {
-
+    const commentHandler = (id) => {
+        console.log(currentComment[id])
     }
 
     const carouselImg = (mappedList) => {
@@ -132,9 +140,9 @@ const NewsContent = () => {
                                         <FormControl
                                             as="textarea"
                                             aria-label="With textarea"
-                                            value={currentComment}
+                                            value={currentComment[mappedObject.id]}
                                             name="comment" onChange={(event) => {changeValue(event)}}
-                                            id={index}
+                                            id={mappedObject.id}
                                         />
                                     </InputGroup>
                                 </Col>
@@ -145,7 +153,7 @@ const NewsContent = () => {
                                         border: "None",
                                         padding: "17px 0 0 0"
                                     }}
-                                            onClick={commentHandler}
+                                            onClick={() => commentHandler(mappedObject.id)}
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                                              fill="currentColor"

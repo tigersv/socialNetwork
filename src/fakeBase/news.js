@@ -1,5 +1,6 @@
 export const news = [
     {
+        id: 1,
         header: {
             img: "https://sun9-49.userapi.com/s/v1/if1/JPbkV_B7JFgtYr7fI2awraNOjomLqi2GNLTvrmFs78GW1rlhAL_DWie_hoMIw2laILBbSHZu.jpg?size=50x50&quality=96&crop=0,0,571,571&ava=1",
             name: "Подслушано в Рыбацком ™"
@@ -29,6 +30,7 @@ export const news = [
         }
     },
     {
+        id: 2,
         header: {
             img: "https://www.magnitogorsk.ru/storage/app/media/icons/menu/main/9.png",
             name: "ПДД"
@@ -50,6 +52,7 @@ export const news = [
         }
     },
     {
+        id: 3,
         header: {
             img: "https://www.kp40.ru/news_images/anons/42069.jpg",
             name: "В мире живтных"
