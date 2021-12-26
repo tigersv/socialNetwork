@@ -5,7 +5,8 @@ export const users = [
         username: "Nik",
         avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2umeiV8pVdahTlB81yAxw4b8O7X0PFaEDsQ&usqp=CAU",
         email: "Nik@mail.ru",
-        course: 1
+        course: 1,
+        online: true
     },
     {
         id: 2,
@@ -13,7 +14,8 @@ export const users = [
         username: "Garry",
         avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2umeiV8pVdahTlB81yAxw4b8O7X0PFaEDsQ&usqp=CAU",
         email: "garry@gmail.com",
-        course: 2
+        course: 2,
+        online: true
     },
     {
         id: 3,
@@ -21,6 +23,7 @@ export const users = [
         username: "Bob",
         avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2umeiV8pVdahTlB81yAxw4b8O7X0PFaEDsQ&usqp=CAU",
         email: "bob@yahoo.com",
-        course: 3
+        course: 3,
+        online: false
     },
 ]
