@@ -5,25 +5,30 @@ import {users} from "../../../fakeBase/users"
 
 const Main = () => {
 
-    const yourFriends = (mappedObject) => {
-        return(
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                    {console.log(mappedObject.name)}
-                    <Card.Title>{mappedObject.name}</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-        )
+    const yourFriends = () => {
+        return(users.map((mappedObject, index) => {
+            return(
+                <Card style={{ width: '50rem', borderRadius: '50px', margin: '0px 0px 5px 0px',}} id={mappedObject.id}>
+                    <p style={{margin: '5px 0px 5px 15px'}}>
+                        <Card.Img variant="top" src={mappedObject.avatar} style={{width: '5rem', float: "left", verticalAlign: "middle", margin: '10px 20px 10px 0px'}} />
+                        <p style={{textAlign: 'center'}}>{mappedObject.name}</p>
+                        <div style={{verticalAlign: "bottom",}}>
+                        <button style={{
+                            backgroundColor: '#e0e0e0', width: '40rem', margin: '0px auto 0px ', height: "50px", border: "0", borderRadius: "20px"
+                        }}>
+                        </button>
+                        </div>
+                    </p>
+                </Card>
+            )
+        }))
     }
+
+
 
     return (
         <div>
-            {yourFriends(users)}
+            {yourFriends()}
         </div>
     );
 };
