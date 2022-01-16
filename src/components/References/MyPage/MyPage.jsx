@@ -1,13 +1,19 @@
 import React from 'react';
-import NavBar from "../ReusableComponents/NavBar";
-import Main from "./Main/Main";
-
+import {Col, Row} from "react-bootstrap";
+import LeftContent from "./Content/LeftContent";
+import RightContent from "./Content/RightContent";
 
 const MyPage = () => {
     return (
         <div>
-            <NavBar/>
-            <Main/>
+            <Row>
+                <Col sm={3}>
+                    <LeftContent/>
+                </Col>
+                <Col sm={9}>
+                    <RightContent/>
+                </Col>
+            </Row>
         </div>
     );
 };

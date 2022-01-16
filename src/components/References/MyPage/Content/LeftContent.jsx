@@ -1,6 +1,6 @@
 import React from 'react';
 import {Card, Button} from "react-bootstrap";
-import userImg from '../../../../../assets/images/user.png'
+import userImg from '../../../../assets/images/user.png'
 
 const LeftContent = () => {
     return (

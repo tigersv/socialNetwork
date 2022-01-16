@@ -6,7 +6,7 @@ const NavBar = () => {
     return (
         <Navbar collapseOnSelect expand="md" bg="info" variant="light" style={{"marginBottom": 15}}>
             <Container>
-                <Navbar.Brand href="#home">Social Network</Navbar.Brand>
+                <Navbar.Brand href="/">Social Network</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
