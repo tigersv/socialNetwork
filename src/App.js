@@ -25,7 +25,7 @@ function App() {
                 <Col sm={8}>
                     <BrowserRouter>
                         <Routes>
-
+                            # Users/1
                             <Route path="/" element={<Navigate to="/users/1"/>}/>
                             <Route path="/users/:userId" element={<MyPage/>}/>
                             <Route path="/news" element={<News/>}/>
