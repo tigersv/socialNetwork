@@ -16,6 +16,8 @@ const Message = () => {
                         <button style={{
                             backgroundColor: '#e0e0e0', width: '80% ', margin: '0px auto 0px ', height: "50px", border: "0", borderRadius: "20px"
                         }}>
+
+
                         </button>
                         </div>
                     </p>
