@@ -16,9 +16,9 @@ function App() {
     return (
         <div>
             <NavBar/>
-            <Container>
+            <Container fluid="md">
             <Row>
-                <Col sm={2}>
+                <Col>
                     <SideBar/>
                 </Col>
                 <Col sm={8}>
@@ -32,7 +32,7 @@ function App() {
                         </Routes>
                     </BrowserRouter>
                 </Col>
-                <Col sm={2}>
+                <Col>
                     search
                 </Col>
             </Row>
