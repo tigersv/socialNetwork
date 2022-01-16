@@ -16,6 +16,7 @@ const LeftContent = () => {
                     </Card.Text>
                     <Card.Text>
                         Денежные перводы
+
                     </Card.Text>
                 </Card.Body>
             </Card>
