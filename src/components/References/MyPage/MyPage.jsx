@@ -8,6 +8,7 @@ const MyPage = () => {
     const split = path.split('/')
     const id = Number(split[2])
     console.log(id)
+
     return (
         <div>
             <Row>
