@@ -1,14 +1,15 @@
 import React from 'react';
 import {Card, Button} from "react-bootstrap";
 import userImg from '../../../../assets/images/user.png'
+import {users} from "../../../../fakeBase/users"
 
 const LeftContent = () => {
     return (
         <div>
             <Card className="text-center">
-                <Card.Img variant="top" src={userImg} />
+                <Card.Img variant="top" src={users[0].avatar} />
                 <Card.Body>
-                    <Button variant="primary">Редактировать</Button>
+                    <Button style={{width: '90%', }} variant="primary">Редактировать</Button>
                     <div style={{"marginTop": 20, "marginBottom": 20}}></div>
                     <Card.Text>
                         Воспоминания

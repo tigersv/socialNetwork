@@ -1,6 +1,7 @@
 import React from 'react';
 import {Navbar, Container, Nav, NavDropdown, Image, Dropdown} from 'react-bootstrap'
 import userImg from '../../../assets/images/user.png'
+import {users} from "../../../fakeBase/users"
 
 const NavBar = () => {
     return (

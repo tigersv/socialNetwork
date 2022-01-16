@@ -25,7 +25,9 @@ function App() {
                     <BrowserRouter>
                         <Routes>
                             <Route path="/" element={<MyPage/>}/>
-                            <Route path="/my_page" element={<MyPage/>}/>
+                            <Route path="/my_page" element={<MyPage/>}>
+                                <Route path="/my_page/1" />
+                            </Route>
                             <Route path="/news" element={<News/>}/>
                             <Route path="/friends" element={<Friends/>}/>
                             <Route path="/message" element={<Message/>}/>

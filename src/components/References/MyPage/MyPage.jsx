@@ -4,6 +4,10 @@ import LeftContent from "./Content/LeftContent";
 import RightContent from "./Content/RightContent";
 
 const MyPage = () => {
+    const path = window.location.pathname
+    const split = path.split('/')
+    const id = Number(split[2])
+    console.log(id)
     return (
         <div>
             <Row>
