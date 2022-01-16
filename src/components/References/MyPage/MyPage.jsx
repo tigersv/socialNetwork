@@ -9,6 +9,7 @@ const MyPage = () => {
     const id = Number(split[2])
     console.log(id)
 
+
     return (
         <div>
             <Row>
