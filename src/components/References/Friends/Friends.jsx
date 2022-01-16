@@ -31,6 +31,8 @@ const Friends = () => {
                     console.log(mappedObject)
                     return(
                         renderUser(mappedObject)
+
+
                     )
                 }
             }else {
