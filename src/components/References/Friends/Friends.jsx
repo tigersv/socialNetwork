@@ -1,9 +1,17 @@
 import React from 'react';
 import {Tabs, Tab, Card} from "react-bootstrap"
 import {users} from "../../../fakeBase/users"
+import {useNavigate} from "react-router-dom"
 
 
 const Friends = () => {
+    let navigate = useNavigate()
+
+    const redirectHandler = (id) => {
+        return(
+            navigate("/users/" + id)
+        )
+    }
 
     const renderUser = (mappedObject) => {
         return(
@@ -11,8 +19,11 @@ const Friends = () => {
                   style={{borderRadius: "50px", margin: "10px 0 0 0"}}>
                 <Card.Body >
                     <img
+                        onClick={() => redirectHandler(mappedObject.id)}
                         src={mappedObject.avatar}
-                        style={{width: "100px", float: "left",height: "100px", verticalAlign: "middle", margin: "0px 10px 0px 15px"}}
+                        style={{width: "100px", float: "left",height: "100px",
+                            verticalAlign: "middle", margin: "0px 10px 0px 15px",
+                            cursor: "pointer"}}
                     />
                     <p style={{margin: "5px 0 0 0"}}>{mappedObject.name}</p>
                     <p style={{margin: "5px 0 0 0"}}>{mappedObject.username}</p>
@@ -28,7 +39,6 @@ const Friends = () => {
             users.map((mappedObject, index) => {
             if (online){
                 if (mappedObject.online){
-                    console.log(mappedObject)
                     return(
                         renderUser(mappedObject)
 
@@ -48,7 +58,7 @@ const Friends = () => {
     return (
         <div>
             <Tabs
-                defaultActiveKey="home"
+                defaultActiveKey="Online"
                 transition={false}
                 id="noanim-tab-example"
                 className="mb-3"

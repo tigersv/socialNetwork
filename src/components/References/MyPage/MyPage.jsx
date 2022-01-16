@@ -8,13 +8,11 @@ const MyPage = () => {
     const split = path.split('/')
     const id = Number(split[2])
     console.log(id)
-
-
     return (
         <div>
             <Row>
                 <Col sm={3}>
-                    <LeftContent/>
+                    <LeftContent userId={id}/>
                 </Col>
                 <Col sm={9}>
                     <RightContent/>

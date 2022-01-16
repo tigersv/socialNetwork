@@ -5,7 +5,8 @@ import Message from "./components/References/Messages/Message";
 import {
     BrowserRouter,
     Routes,
-    Route
+    Route,
+    Navigate
 } from "react-router-dom";
 import {Col, Container, Row} from "react-bootstrap";
 import SideBar from "./components/References/ReusableComponents/SideBar";
@@ -24,10 +25,9 @@ function App() {
                 <Col sm={8}>
                     <BrowserRouter>
                         <Routes>
-                            <Route path="/" element={<MyPage/>}/>
-                            <Route path="/my_page" element={<MyPage/>}>
-                                <Route path="/my_page/1" />
-                            </Route>
+
+                            <Route path="/" element={<Navigate to="/users/1"/>}/>
+                            <Route path="/users/:userId" element={<MyPage/>}/>
                             <Route path="/news" element={<News/>}/>
                             <Route path="/friends" element={<Friends/>}/>
                             <Route path="/message" element={<Message/>}/>

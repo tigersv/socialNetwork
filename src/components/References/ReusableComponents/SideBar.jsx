@@ -85,15 +85,15 @@ const SideBar = () => {
     return (
         <div>
             <Nav className="flex-column">
-                <Nav.Link style={navLinkStyle} eventKey="link-1" href="/my_page">
+                <Nav.Link style={navLinkStyle} eventKey="link-1" href="/users/1">
                     <img style={iconStyle} src="https://img.icons8.com/external-kmg-design-flat-kmg-design/32/000000/external-user-back-to-school-kmg-design-flat-kmg-design.png"/>
                     моя страница
                 </Nav.Link>
-                <Nav.Link style={navLinkStyle} eventKey="link-2" href="message">
+                <Nav.Link style={navLinkStyle} eventKey="link-2" href="/message">
                     <img style={iconStyle} src="https://img.icons8.com/fluency/48/000000/chat-message.png"/>
                     сообщения
                 </Nav.Link>
-                <Nav.Link style={navLinkStyle} eventKey="link-3" href="friends">
+                <Nav.Link style={navLinkStyle} eventKey="link-3" href="/friends">
                     <img style={iconStyle} src="https://img.icons8.com/external-justicon-flat-justicon/64/000000/external-friend-notifications-justicon-flat-justicon.png"/>
                     друзья
                 </Nav.Link>

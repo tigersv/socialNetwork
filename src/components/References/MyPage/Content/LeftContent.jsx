@@ -3,11 +3,12 @@ import {Card, Button} from "react-bootstrap";
 import userImg from '../../../../assets/images/user.png'
 import {users} from "../../../../fakeBase/users"
 
-const LeftContent = () => {
+const LeftContent = (props) => {
+
     return (
         <div>
             <Card className="text-center">
-                <Card.Img variant="top" src={users[0].avatar} />
+                <Card.Img variant="top" src={users[props.userId - 1].avatar} />
                 <Card.Body>
                     <Button style={{width: '90%', }} variant="primary">Редактировать</Button>
                     <div style={{"marginTop": 20, "marginBottom": 20}}></div>
